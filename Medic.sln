@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medic", "Medic\Medic.csproj", "{6DC4D1E3-C1BC-47F3-B3AC-D4CD42EA2B2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMedic", "TestMedic\TestMedic.csproj", "{418E3DD4-4DFA-4199-BD5C-C042C9DD0F1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DC4D1E3-C1BC-47F3-B3AC-D4CD42EA2B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC4D1E3-C1BC-47F3-B3AC-D4CD42EA2B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC4D1E3-C1BC-47F3-B3AC-D4CD42EA2B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC4D1E3-C1BC-47F3-B3AC-D4CD42EA2B2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{418E3DD4-4DFA-4199-BD5C-C042C9DD0F1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{418E3DD4-4DFA-4199-BD5C-C042C9DD0F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{418E3DD4-4DFA-4199-BD5C-C042C9DD0F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{418E3DD4-4DFA-4199-BD5C-C042C9DD0F1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E8C3A31-0704-454C-BCF0-E168B5CE263F}
+	EndGlobalSection
+EndGlobal

@@ -45,5 +45,16 @@ namespace TestMedic
             string diagnosis = Medic.Form1.Diagnosis();
             Assert.AreEqual("Авитаминоз", diagnosis);
         }
+        [TestMethod]
+        public void TestError()
+        {
+            Medic.Form1.Kashel = true;
+            Medic.Form1.Nasmork = true;
+            Medic.Form1.Slezotochenie = true;
+            Medic.Form1.Temperatura = 40.0;
+            Medic.Form1.Lomkost = true;
+            string diagnosis = Medic.Form1.Diagnosis();
+            Assert.AreEqual("Такой болезни не существует. Присутствие одновремнно всех симптомов невозможно. Пройдите тест еще раз.", diagnosis);
+        }
     }
 }

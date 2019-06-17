@@ -24,34 +24,55 @@ namespace Medic
         public static string Diagnosis()
         {
             string diagnosis="Здоров";
-            if (Kashel==true || Nasmork == true)
+            if (Kashel == true && Nasmork == true && Slezotochenie == true && Lomkost == true && Temperatura > 37.4)
             {
-                diagnosis ="ОРВ";
+                diagnosis = "Такой болезни не существует. Присутствие одновремнно всех симптомов невозможно. Пройдите тест еще раз.";
+                ToNull();
+                return diagnosis;
             }
-            if (Nasmork == true && Slezotochenie)
-            {
-                diagnosis = "Аллергия";
-            }
-            if (Nasmork == true && Slezotochenie)
-            {
-                diagnosis = "Аллергия";
-            }
-            if (Kashel == true && Nasmork == true && Temperatura>37.4)
+            if (Kashel == true && Nasmork == true && Temperatura > 37.4)
             {
                 diagnosis = "Грипп";
+                ToNull();
+                return diagnosis;
+            }
+            if (Kashel==true && Nasmork == true)
+            {
+                diagnosis ="ОРВ";
+                ToNull();
+                return diagnosis;
+            }
+            if (Nasmork == true && Slezotochenie==true)
+            {
+                diagnosis = "Аллергия";
+                ToNull();
+                return diagnosis;
+            }
+            if (Nasmork == true && Slezotochenie)
+            {
+                diagnosis = "Аллергия";
+                ToNull();
+                return diagnosis;
             }
             if (Slezotochenie == true && Lomkost == true)
             {
+                
                 diagnosis = "Авитаминоз";
+                ToNull();
+                return diagnosis;
             }
 
             //Сброс показателей для Юнит тестов
+            ToNull();
+            return diagnosis;
+        }
+        public static void ToNull()
+        {
             Kashel = false;
             Nasmork = false;
             Slezotochenie = false;
             Temperatura = 36.0;
             Lomkost = false;
-            return diagnosis;
         }
 
         List<string> questions = new List<string>();

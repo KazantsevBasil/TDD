@@ -13,13 +13,26 @@ namespace Medic
 
     public partial class Form1 : Form
     {
-        public static string Diagnosis(bool kashel, bool nasmork)
+        //Симптомы:
+        public static bool Kashel=false;
+        public static bool Nasmork=false;
+        public static bool Slezotochenie = false;
+        
+
+        public static string Diagnosis()
         {
             string diagnosis="Здоров";
-            if (kashel==true || nasmork == true)
+            if (Kashel==true || Nasmork == true)
             {
                 diagnosis ="ОРВ";
             }
+            if (Nasmork == true && Slezotochenie)
+            {
+                diagnosis = "Аллергия";
+            }
+            Kashel = false;
+            Nasmork = false;
+            Slezotochenie = false;
             return diagnosis;
         }
 

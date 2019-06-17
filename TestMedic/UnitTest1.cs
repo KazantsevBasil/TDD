@@ -9,10 +9,24 @@ namespace TestMedic
         [TestMethod]
         public void TestORV()
         {
-            bool kashel = true;
-            bool nasmork = true;
-            string diagnosis = Medic.Form1.Diagnosis(kashel, nasmork);
+            Medic.Form1.Kashel = true;
+            Medic.Form1.Nasmork = true;
+            string diagnosis = Medic.Form1.Diagnosis();
             Assert.AreEqual("ОРВ", diagnosis);
+        }
+        [TestMethod]
+        public void TestHealthy()
+        {
+            string diagnosis = Medic.Form1.Diagnosis();
+            Assert.AreEqual("Здоров", diagnosis);
+        }
+        [TestMethod]
+        public void TestAlergia()
+        {
+            Medic.Form1.Slezotochenie = true;
+            Medic.Form1.Nasmork = true;
+            string diagnosis = Medic.Form1.Diagnosis();
+            Assert.AreEqual("Аллергия", diagnosis);
         }
     }
 }

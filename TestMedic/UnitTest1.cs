@@ -37,5 +37,13 @@ namespace TestMedic
             string diagnosis = Medic.Form1.Diagnosis();
             Assert.AreEqual("Грипп", diagnosis);
         }
+        [TestMethod]
+        public void TestAvitaminoz()
+        {
+            Medic.Form1.Slezotochenie = true;
+            Medic.Form1.Lomkost = true;
+            string diagnosis = Medic.Form1.Diagnosis();
+            Assert.AreEqual("Авитаминоз", diagnosis);
+        }
     }
 }

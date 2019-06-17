@@ -18,6 +18,7 @@ namespace Medic
         public static bool Nasmork=false;
         public static bool Slezotochenie = false;
         public static double Temperatura = 36.0;
+        public static bool Lomkost = false;
 
 
         public static string Diagnosis()
@@ -39,11 +40,17 @@ namespace Medic
             {
                 diagnosis = "Грипп";
             }
+            if (Slezotochenie == true && Lomkost == true)
+            {
+                diagnosis = "Авитаминоз";
+            }
+
             //Сброс показателей для Юнит тестов
             Kashel = false;
             Nasmork = false;
             Slezotochenie = false;
             Temperatura = 36.0;
+            Lomkost = false;
             return diagnosis;
         }
 
@@ -57,6 +64,7 @@ namespace Medic
             questions.Add("Наличие Насморка?");
             questions.Add("Слезотечение из глаз?");
             questions.Add("Температура тела выше нормы(37.4)?");
+            questions.Add("Ломкость ноктей?");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -79,6 +87,14 @@ namespace Medic
                 if (result == DialogResult.Yes && i == 3)
                 {
                     Slezotochenie = true;
+                }
+                if (result == DialogResult.Yes && i == 4)
+                {
+                    Temperatura = 40.0;
+                }
+                if (result == DialogResult.Yes && i == 5)
+                {
+                    Lomkost = true;
                 }
                 i++;
             }

@@ -7,8 +7,12 @@ namespace TestMedic
     public class Tests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestORV()
         {
+            bool kashel = true;
+            bool nasmork = true;
+            string diagnosis = Medic.Form1.Diagnosis(kashel, nasmork);
+            Assert.AreEqual("ОРВ", diagnosis);
         }
     }
 }

@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Medic", "Medic\Medic.csproj", "{6DC4D1E3-C1BC-47F3-B3AC-D4CD42EA2B2A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMedic", "TestMedic\TestMedic.csproj", "{418E3DD4-4DFA-4199-BD5C-C042C9DD0F1D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6DC4D1E3-C1BC-47F3-B3AC-D4CD42EA2B2A} = {6DC4D1E3-C1BC-47F3-B3AC-D4CD42EA2B2A}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

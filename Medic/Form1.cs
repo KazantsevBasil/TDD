@@ -61,7 +61,28 @@ namespace Medic
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            int i = 1;
+            foreach (string line in questions)
+            {
+                string messageBoxText = line;
+                string caption = "Вопрос №" + " " + i;
+                MessageBoxButtons button = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(messageBoxText, caption, button);
+                if (result == DialogResult.Yes && i==1)
+                {
+                    Kashel = true;
+                }
+                if (result == DialogResult.Yes && i == 2)
+                {
+                    Nasmork = true;
+                }
+                if (result == DialogResult.Yes && i == 3)
+                {
+                    Slezotochenie = true;
+                }
+                i++;
+            }
+            MessageBox.Show("Диагноз: "+ Diagnosis());
         }
     }
 }

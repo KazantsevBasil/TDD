@@ -17,7 +17,8 @@ namespace Medic
         public static bool Kashel=false;
         public static bool Nasmork=false;
         public static bool Slezotochenie = false;
-        
+        public static double Temperatura = 36.0;
+
 
         public static string Diagnosis()
         {
@@ -30,9 +31,19 @@ namespace Medic
             {
                 diagnosis = "Аллергия";
             }
+            if (Nasmork == true && Slezotochenie)
+            {
+                diagnosis = "Аллергия";
+            }
+            if (Kashel == true && Nasmork == true && Temperatura>37.4)
+            {
+                diagnosis = "Грипп";
+            }
+            //Сброс показателей для Юнит тестов
             Kashel = false;
             Nasmork = false;
             Slezotochenie = false;
+            Temperatura = 36.0;
             return diagnosis;
         }
 

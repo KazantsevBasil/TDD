@@ -28,5 +28,14 @@ namespace TestMedic
             string diagnosis = Medic.Form1.Diagnosis();
             Assert.AreEqual("Аллергия", diagnosis);
         }
+        [TestMethod]
+        public void TestGripp()
+        {
+            Medic.Form1.Kashel = true;
+            Medic.Form1.Nasmork = true;
+            Medic.Form1.Temperatura = 38.8;
+            string diagnosis = Medic.Form1.Diagnosis();
+            Assert.AreEqual("Грипп", diagnosis);
+        }
     }
 }

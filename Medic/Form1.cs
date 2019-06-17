@@ -48,10 +48,15 @@ namespace Medic
         }
 
         List<string> questions = new List<string>();
+       
 
         public Form1()
         {
             InitializeComponent();
+            questions.Add("У вас присутсвует сухой или мокрый кашель?");
+            questions.Add("Наличие Насморка?");
+            questions.Add("Слезотечение из глаз?");
+            questions.Add("Температура тела выше нормы(37.4)?");
         }
 
         private void button1_Click(object sender, EventArgs e)

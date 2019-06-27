@@ -62,12 +62,25 @@ namespace TestMedic
         [TestMethod]
         public void CreateFileToSave()
         {
-            Form1.Slezotochenie = true;
-            Form1.Lomkost = true;
+       
             Form1.patient.Set_Fio("Валентин");
             Form1.patient.Data_to_file();
-            string path = AppDomain.CurrentDomain.BaseDirectory + "\\" + Form1.patient.fio;
+            string path = AppDomain.CurrentDomain.BaseDirectory + "\\" + Form1.patient.fio + ".txt";
             Assert.IsTrue(File.Exists(path));
+        }
+        [TestMethod]
+        public void WriteDataToFile()
+        {
+            Form1.Slezotochenie = true;
+            Form1.Lomkost = true;
+            string diagnosis = Form1.Diagnosis();
+            Form1.patient.Set_Fio("Валентин");
+            Form1.patient.Set_Diagnosis(diagnosis);
+            Form1.patient.Data_to_file();
+            string path = AppDomain.CurrentDomain.BaseDirectory + "\\" + Form1.patient.fio + ".txt";
+            string Content = File.ReadAllText(path);
+            string text = "ФИО: Валентин" + "\n" + "Диагноз: Авитаминоз";
+            Assert.AreEqual(Content, text);
         }
     }
 }

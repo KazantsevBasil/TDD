@@ -41,12 +41,12 @@ namespace Medic
         public void Data_to_file()
         {
             string path = AppDomain.CurrentDomain.BaseDirectory +"\\"+ fio + ".txt";
-            string text = "ФИО: " + fio + "/n" + "Диагноз: " + diagnosis;
+            string text = "ФИО: " + fio + "\n" + "Диагноз: " + diagnosis;
             if (File.Exists(path))
             {
                 File.Delete(path);
             }
-            File.Create(path);
+            File.WriteAllText(path, text);
         }
     }
     

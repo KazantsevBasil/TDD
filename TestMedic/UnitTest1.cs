@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using Medic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestMedic
@@ -55,6 +57,17 @@ namespace TestMedic
             Medic.Form1.Lomkost = true;
             string diagnosis = Medic.Form1.Diagnosis();
             Assert.AreEqual("Такой болезни не существует. Присутствие одновремнно всех симптомов невозможно. Пройдите тест еще раз.", diagnosis);
+
+        }
+        [TestMethod]
+        public void CreateFileToSave()
+        {
+            Form1.Slezotochenie = true;
+            Form1.Lomkost = true;
+            Form1.patient.Set_Fio("Валентин");
+            Form1.patient.Data_to_file();
+            string path = AppDomain.CurrentDomain.BaseDirectory + "\\" + Form1.patient.fio;
+            Assert.IsTrue(File.Exists(path));
         }
     }
 }

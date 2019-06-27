@@ -19,6 +19,7 @@ namespace Medic
         public static bool Slezotochenie = false;
         public static double Temperatura = 36.0;
         public static bool Lomkost = false;
+        public static Patient patient = new Patient();
 
 
         public static string Diagnosis()

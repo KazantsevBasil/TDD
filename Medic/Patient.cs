@@ -41,7 +41,8 @@ namespace Medic
         public void Data_to_file()
         {
             string path = AppDomain.CurrentDomain.BaseDirectory +"\\"+ fio + ".txt";
-            string text = "ФИО: " + fio + "\n" + "Диагноз: " + diagnosis;
+            string date = DateTime.Now.ToString("dd.MM.yyyy");
+            string text = "ФИО: " + fio + "\n" + "Диагноз: " + diagnosis + "\n" + date;
             if (File.Exists(path))
             {
                 File.Delete(path);

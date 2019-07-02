@@ -19,6 +19,8 @@ namespace Medic
         public static bool Slezotochenie = false;
         public static double Temperatura = 36.0;
         public static bool Lomkost = false;
+        public static bool YellowSkin = false;
+        public static bool Rvota = false;
         public static Patient patient = new Patient();
 
 
@@ -59,6 +61,13 @@ namespace Medic
             {
                 
                 diagnosis = "Авитаминоз";
+                ToNull();
+                return diagnosis;
+            }
+            if (YellowSkin == true && Rvota == true && Temperatura > 37.4)
+            {
+
+                diagnosis = "Гепатит А. Срочно запишитесь на прием к врачу!";
                 ToNull();
                 return diagnosis;
             }

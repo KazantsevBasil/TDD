@@ -97,5 +97,14 @@ namespace TestMedic
             string text = "ФИО: Валентин" + "\n" + "Диагноз: Авитаминоз" + "\n" + date;
             Assert.AreEqual(Content, text);
         }
+        [TestMethod]
+        public void TestGepatitA()
+        {
+            Medic.Form1.YellowSkin = true;
+            Medic.Form1.Temperatura = 38.8;
+            Medic.Form1.Rvota = true;
+            string diagnosis = Medic.Form1.Diagnosis();
+            Assert.AreEqual("Гепатит А. Срочно запишитесь на прием к врачу!", diagnosis);
+        }
     }
 }

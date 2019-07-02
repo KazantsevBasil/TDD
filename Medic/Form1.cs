@@ -91,6 +91,8 @@ namespace Medic
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Form form2 = new Form2(this);
+            Hide();
             int i = 1;
             foreach (string line in questions)
             {
@@ -121,6 +123,8 @@ namespace Medic
                 i++;
             }
             MessageBox.Show("Диагноз: "+ Diagnosis());
+            form2.Show();
+            patient.Data_to_file();
         }
     }
 }

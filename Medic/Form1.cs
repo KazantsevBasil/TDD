@@ -180,6 +180,34 @@ namespace Medic
                 {
                     Lomkost = true;
                 }
+                if (result == DialogResult.Yes && i == 6)
+                {
+                    YellowSkin = true;
+                }
+                if (result == DialogResult.Yes && i == 7)
+                {
+                    Rvota = true;
+                }
+                if (result == DialogResult.Yes && i == 8)
+                {
+                    TremorRuk = true;
+                }
+                if (result == DialogResult.Yes && i == 9)
+                {
+                    RezkoePohudenie = true;
+                }
+                if (result == DialogResult.Yes && i == 10)
+                {
+                    BolVGorle = true;
+                }
+                if (result == DialogResult.Yes && i == 11)
+                {
+                    Izshoga = true;
+                }
+                if (result == DialogResult.Yes && i == 12)
+                {
+                    BolVZeludke = true;
+                }
                 i++;
             }
             MessageBox.Show("Диагноз: "+ Diagnosis());

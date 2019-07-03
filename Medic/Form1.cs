@@ -23,6 +23,7 @@ namespace Medic
         public static bool Rvota = false;
         public static bool TremorRuk = false;
         public static bool RezkoePohudenie = false;
+        public static bool BolVGorle = false;
         public static Patient patient = new Patient();
 
 
@@ -90,6 +91,14 @@ namespace Medic
                 return diagnosis;
             }
 
+            if (Temperatura == 38.8 && Kashel == true && BolVGorle == true)
+            {
+
+                diagnosis = "Бронхит";
+                ToNull();
+                return diagnosis;
+            }
+
             //Сброс показателей для Юнит тестов
             ToNull();
             return diagnosis;
@@ -105,6 +114,7 @@ namespace Medic
             YellowSkin = false;
             TremorRuk = false;
             RezkoePohudenie = false;
+            BolVGorle = false;                                                       
         }
 
         List<string> questions = new List<string>();

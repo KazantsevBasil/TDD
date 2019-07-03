@@ -115,13 +115,22 @@ namespace TestMedic
             Assert.AreEqual("У вас проблемы с щитовидной железой. Рекомендуется пройти обследование в больнице!", diagnosis);
         }
         [TestMethod]
-        public void TestRotaVirus()
+        public void TestRvotaVirus()
         {
             Form1.Rvota = true;
             Form1.Temperatura = 38.8;
             Form1.Nasmork = true;
             string diagnosis = Form1.Diagnosis();
             Assert.AreEqual("Ротавирусная инфекция. Соблюдайте санитарные нормы, чтобы не заразить окружающих!", diagnosis);
+        }
+        [TestMethod]
+        public void TestBronhit()
+        {
+            Form1.Kashel = true;
+            Form1.Temperatura = 38.8;
+            Form1.BolVGorle = true;
+            string diagnosis = Form1.Diagnosis();
+            Assert.AreEqual("Бронхит", diagnosis);
         }
     }
 }

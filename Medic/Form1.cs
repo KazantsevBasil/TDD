@@ -21,6 +21,8 @@ namespace Medic
         public static bool Lomkost = false;
         public static bool YellowSkin = false;
         public static bool Rvota = false;
+        public static bool TremorRuk = false;
+        public static bool RezkoePohudenie = false;
         public static Patient patient = new Patient();
 
 
@@ -72,6 +74,14 @@ namespace Medic
                 return diagnosis;
             }
 
+            if (TremorRuk = true && RezkoePohudenie == true)
+            {
+
+                diagnosis = "У вас проблемы с щитовидной железой. Рекомендуется пройти обследование в больнице!";
+                ToNull();
+                return diagnosis;
+            }
+
             //Сброс показателей для Юнит тестов
             ToNull();
             return diagnosis;
@@ -83,6 +93,10 @@ namespace Medic
             Slezotochenie = false;
             Temperatura = 36.0;
             Lomkost = false;
+            Rvota = false;
+            YellowSkin = false;
+            TremorRuk = false;
+            RezkoePohudenie = false;
         }
 
         List<string> questions = new List<string>();

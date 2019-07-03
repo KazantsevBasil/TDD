@@ -106,5 +106,13 @@ namespace TestMedic
             string diagnosis = Medic.Form1.Diagnosis();
             Assert.AreEqual("Гепатит А. Срочно запишитесь на прием к врачу!", diagnosis);
         }
+        [TestMethod]
+        public void TestSitovidnaya()
+        {
+            Form1.TremorRuk = true;
+            Form1.RezkoePohudenie = true;
+            string diagnosis = Form1.Diagnosis();
+            Assert.AreEqual("У вас проблемы с щитовидной железой. Рекомендуется пройти обследование в больнице!", diagnosis);
+        }
     }
 }

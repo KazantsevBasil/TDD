@@ -140,6 +140,13 @@ namespace Medic
             questions.Add("Слезотечение из глаз?");
             questions.Add("Температура тела выше нормы(37.4)?");
             questions.Add("Ломкость ноктей?");
+            questions.Add("У вас наблюдается пожелтение кожи?");
+            questions.Add("Вас пару раз вырвало?");
+            questions.Add("Трясутся руки?");
+            questions.Add("Наблюдается резкое похудение?");
+            questions.Add("Боль в горле?");
+            questions.Add("Мучает изжога?");
+            questions.Add("Боль в желудке?");
         }
 
         private void button1_Click(object sender, EventArgs e)

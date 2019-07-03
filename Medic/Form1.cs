@@ -82,6 +82,14 @@ namespace Medic
                 return diagnosis;
             }
 
+            if (Temperatura == 38.8 && Nasmork == true && Rvota == true)
+            {
+
+                diagnosis = "Ротавирусная инфекция. Соблюдайте санитарные нормы, чтобы не заразить окружающих!";
+                ToNull();
+                return diagnosis;
+            }
+
             //Сброс показателей для Юнит тестов
             ToNull();
             return diagnosis;

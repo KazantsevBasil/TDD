@@ -114,5 +114,14 @@ namespace TestMedic
             string diagnosis = Form1.Diagnosis();
             Assert.AreEqual("У вас проблемы с щитовидной железой. Рекомендуется пройти обследование в больнице!", diagnosis);
         }
+        [TestMethod]
+        public void TestRotaVirus()
+        {
+            Form1.Rvota = true;
+            Form1.Temperatura = 38.8;
+            Form1.Nasmork = true;
+            string diagnosis = Form1.Diagnosis();
+            Assert.AreEqual("Ротавирусная инфекция. Соблюдайте санитарные нормы, чтобы не заразить окружающих!", diagnosis);
+        }
     }
 }

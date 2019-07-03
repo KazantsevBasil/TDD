@@ -24,6 +24,8 @@ namespace Medic
         public static bool TremorRuk = false;
         public static bool RezkoePohudenie = false;
         public static bool BolVGorle = false;
+        public static bool Izshoga = false;
+        public static bool BolVZeludke = false;
         public static Patient patient = new Patient();
 
 
@@ -75,7 +77,7 @@ namespace Medic
                 return diagnosis;
             }
 
-            if (TremorRuk = true && RezkoePohudenie == true)
+            if (TremorRuk == true && RezkoePohudenie == true)
             {
 
                 diagnosis = "У вас проблемы с щитовидной железой. Рекомендуется пройти обследование в больнице!";
@@ -99,6 +101,14 @@ namespace Medic
                 return diagnosis;
             }
 
+            if (Izshoga == true && RezkoePohudenie == true && BolVZeludke == true)
+            {
+
+                diagnosis = "Гастрит";
+                ToNull();
+                return diagnosis;
+            }
+
             //Сброс показателей для Юнит тестов
             ToNull();
             return diagnosis;
@@ -114,7 +124,9 @@ namespace Medic
             YellowSkin = false;
             TremorRuk = false;
             RezkoePohudenie = false;
-            BolVGorle = false;                                                       
+            BolVGorle = false;
+            Izshoga = false;
+            BolVZeludke = false;
         }
 
         List<string> questions = new List<string>();

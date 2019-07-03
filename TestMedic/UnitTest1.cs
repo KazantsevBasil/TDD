@@ -132,5 +132,14 @@ namespace TestMedic
             string diagnosis = Form1.Diagnosis();
             Assert.AreEqual("Бронхит", diagnosis);
         }
+        [TestMethod]
+        public void TestGastrit()
+        {
+            Form1.RezkoePohudenie = true;
+            Form1.BolVZeludke = true;
+            Form1.Izshoga = true;
+            string diagnosis = Form1.Diagnosis();
+            Assert.AreEqual("Гастрит", diagnosis);
+        }
     }
 }
